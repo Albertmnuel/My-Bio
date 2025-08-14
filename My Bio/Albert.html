@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Albert Emmanuel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color:#69656546;
+      color: #222;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #0b6121;
+    }
+    section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #0b6121;
+       box-shadow: 0 0 10px rgba(1, 249, 1, 0.2);
+      border-radius: 4px;
+    }
+ h2 {
+      color: #333;
+      border-bottom: 2px solid #0b6121;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MY BIO</h1>
+
+  <section>
+    <h2>Welcome</h2>
+    <p>Hi! I'm <strong>Albert Emmanuel</strong>, a passionate and creative <strong>Software Engineering student</strong> based in Nigeria. I build modern websites — both static and responsive — with clean design and practical features.</p>
+  </section>
+
+  <section>
+    <h2>What I Do</h2><p>I specialize in designing and developing professional web pages using <strong>HTML, CSS, and JavaScript</strong>. My focus is on creating fast, responsive, and user-friendly websites that look great on all devices.</p>
+  </section>
+
+  <section>
+    <h2>My Skills</h2>
+    <ul>
+      <li>Front-End Web Development</li>
+      <li>Mobile-Responsive Design</li>
+      <li>GitHub Hosting</li>
+      <li>Website Structuring & Styling</li>
+      <li>Basic UI/UX Design</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>My Goals</h2>
+    <p>I'm on a journey to become a full-stack developer and contribute to projects that solve real-world problems. I love learning, experimenting, and turning ideas into digital solutions.</p>
+  </section>
+
+  <section>
+    <h2>Let's Connect</h2>
+    <p>If you're looking to collaborate, hire a developer, or just say hello — feel free to reach out. I'm always open to exciting opportunities!</p>
+  </section>
+<button onclick="logout()" style="float:right; margin:10px;">Logout</button>
+
+<script>
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html";
+  }
+</script>
+
+
+
+</body>
+</html>
