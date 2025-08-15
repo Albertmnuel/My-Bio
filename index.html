@@ -5,39 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login | Albert Emmanuel</title>
   <style>
-    <body>
-  <h2 class="title">Albert Emmanuel</h2>
-
-  <div class="login-box">
-    <h2>Login</h2>
-    <input type="text" placeholder="Username" id="username">
-    <input type="password" placeholder="Password" id="password">
-    <button onclick="login()">Login</button>
-  </div>
-</body>
-
-
-CSS:
-css
-body {
-  background-color: #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.title {
-  margin-bottom: 20px;
-  color: green;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.login-box {
- background-color: white;
+   background-color: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px green;
@@ -45,6 +13,40 @@ body {
   max-width: 350px;
   text-align: center;
 }
+
+
+ }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+
+    .title {
+      position: absolute;
+      top: 30px;font-size: 20px;
+      color: green;
+      font-weight: bold;
+    }
+
 
 
 
