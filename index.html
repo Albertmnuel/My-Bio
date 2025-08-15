@@ -1,90 +1,91 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>login|Albert Emmanuel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Albert Emmanuel</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f3fff3;
+      background-color: #dcdcdc;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
-    h2.title {
-      color: #0b6121;
+
+    .container {
+      width: 90%;
+      max-width: 350px;
+      background-color: white;
+      padding: 30px 20px;
+      box-shadow: 0 0 10px rgba(0, 128, 0, 0.3);
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid green;
+    }
+
+    h2 {
+      color: green;
       margin-bottom: 20px;
     }
-    .login-box {
-      background-color: #fff;
-      border: 2px solid #0b6121;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(1, 249, 1, 0.2);
-      width: 300px;
-    }
-    .login-box h3 {
-      text-align: center;
-      color: #0b6121;
-      margin-bottom: 15px;
-    }
- .login-box input {
+  input {
       width: 100%;
       padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
+      margin: 10px 0;
       border: 1px solid #ccc;
+      border-radius: 5px;
     }
-    .login-box input[type="submit"] {
-      background-color: #0b6121;
+
+    button {
+      width: 100%;
+      background-color: green;
       color: white;
       border: none;
-      cursor: pointer;
-    }.login-box input[type="submit"]:hover {
-      background-color: #005f00;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .error {
-      color: red;
-      text-align: center;
-      font-size: 14px;
-      margin-bottom: 10px;
+
+    button:hover {
+      background-color: darkgreen;
+    }
+
+    .title {
+      position: absolute;
+      top: 30px;font-size: 20px;
+      color: green;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <div class="title">Albert Emmanuel</div>
 
-  <h2 class="title"> Albert Emmanuel</h2>
-
-  <div class="login-box">
-    <h3>Login</h3>
-    <div id="error" class="error"></div>
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <input type="submit" value="Login">
+  <div class="container">
+    <h2>Login</h2>
+    <form onsubmit="return loginUser()">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
     </form>
   </div>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
+    function loginUser() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-  if (user === "admin" && pass === "1234") {
-        localStorage.setItem("loggedIn", "true");
-        window.location.href = "Albert.html";
+      if (username === "admin" && password === "1234") {
+        window.location.href = "Albert.html"; // change to your actual page
+        return false;
       } else {
-        document.getElementById("error").textContent = "Invalid username or password.";
+        alert("Invalid login!");
+        return false;
       }
-    });
-  </script>
-
+    }
+ </script>
 </body>
 </html>
-
-
-
